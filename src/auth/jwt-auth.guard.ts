@@ -16,7 +16,8 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     ]);
     if (isPublic) {
       return true;
+    } else {
+      return super.canActivate(context);
     }
-    return super.canActivate(context);
   }
 }

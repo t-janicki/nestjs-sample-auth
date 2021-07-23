@@ -1,8 +1,7 @@
 import { Controller, Request, Post, UseGuards, Get } from '@nestjs/common';
 import { AuthService } from '../auth.service';
-import { JwtAuthGuard } from '../jwt-auth.guard';
 import { UsersService } from '../../users/users.service';
-import { Public } from '../constants';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller()
 export class LoginController {
@@ -11,16 +10,16 @@ export class LoginController {
     private userService: UsersService,
   ) {}
 
-  @Public()
+  @UseGuards(AuthGuard('local'))
   @Post('/auth/login')
-  async login(@Request() req) {
-    return this.authService.login(req);
+  login(@Request() req) {
+    const user = req.user;
+    return this.authService.login(user);
   }
 
-  @UseGuards(JwtAuthGuard)
   @Get('/profile')
   getProfile(@Request() req) {
     console.log(req.user);
-    return this.userService.findByUsername('john');
+    return this.userService.findByUsername(req.user.username);
   }
 }
