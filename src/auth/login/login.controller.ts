@@ -19,7 +19,6 @@ export class LoginController {
 
   @Get('/profile')
   getProfile(@Request() req) {
-    console.log(req.user);
     return this.userService.findByUsername(req.user.username);
   }
 }
