@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "username": "john",
-  "password": "changeme"
+  "password": "password"
 }
 
 ###
@@ -44,3 +44,6 @@ Content-Type: application/json
 {
   "name": "updated-post"
 }
+
+###
+GET http://localhost:3000/password

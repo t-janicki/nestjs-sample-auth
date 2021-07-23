@@ -2,12 +2,15 @@ import { Controller, Request, Post, UseGuards, Get } from '@nestjs/common';
 import { AuthService } from '../auth.service';
 import { UsersService } from '../../users/users.service';
 import { AuthGuard } from '@nestjs/passport';
+import { PasswordService } from '../password.service';
+import { Public } from '../constants';
 
 @Controller()
-export class LoginController {
+export class AuthController {
   constructor(
-    private authService: AuthService,
-    private userService: UsersService,
+    private readonly authService: AuthService,
+    private readonly userService: UsersService,
+    private readonly passwordService: PasswordService,
   ) {}
 
   @UseGuards(AuthGuard('local'))
@@ -20,5 +23,11 @@ export class LoginController {
   @Get('/profile')
   getProfile(@Request() req) {
     return this.userService.findByUsername(req.user.username);
+  }
+
+  @Public()
+  @Get('/password')
+  encodePassword() {
+    return this.passwordService.encodePassword('password');
   }
 }

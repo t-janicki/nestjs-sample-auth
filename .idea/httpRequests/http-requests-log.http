@@ -1,0 +1,476 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124826.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john2",
+  "password": "password"
+}
+
+<> 2021-07-23T124823.400.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124821.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password2"
+}
+
+<> 2021-07-23T124818.400.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124816.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124815.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124811.201.json
+
+###
+
+GET http://localhost:3000/password
+
+<> 2021-07-23T124705.200.html
+
+###
+
+GET http://localhost:3000/password
+
+<> 2021-07-23T124643.200.html
+
+###
+
+GET http://localhost:3000/password
+
+<> 2021-07-23T124641.200.html
+
+###
+
+GET http://localhost:3000/password
+
+<> 2021-07-23T124610.200.html
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124401.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124400.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124219.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password2"
+}
+
+<> 2021-07-23T124211.400.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124140.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password2"
+}
+
+<> 2021-07-23T124137.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124133.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T124115.201.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123909.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123904.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123859.500.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123842.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123807.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123749.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+<> 2021-07-23T123747.401.json
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "changeme"
+}
+
+<> 2021-07-23T123742.401.json
+
+###
+
+GET http://localhost:3000/password
+
+###
+
+GET http://localhost:3000/password
+
+###
+
+GET http://localhost:3000/password
+
+<> 2021-07-23T123213.401.json
+
+###
+
+GET http://localhost:3000/posts/1a06dcd2-a5f6-42f3-aee3-44e5b54fe8f6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120906.200.json
+
+###
+
+GET http://localhost:3000/posts/1a06dcd2-a5f6-42f3-aee3-44e5b54fe8f6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+###
+
+DELETE http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+
+<> 2021-07-23T120825.200.json
+
+###
+
+DELETE http://localhost:3000/posts
+
+<> 2021-07-23T120823.401.json
+
+###
+
+POST http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "name": "new-post"
+}
+
+<> 2021-07-23T120816.403.json
+
+###
+
+GET http://localhost:3000/posts/1a06dcd2-a5f6-42f3-aee3-44e5b54fe8f6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120803.200.json
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120758.200.json
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120724.200.json
+
+###
+
+DELETE http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+
+<> 2021-07-23T120429.200.json
+
+###
+
+POST http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "name": "new-post"
+}
+
+<> 2021-07-23T120424.403.json
+
+###
+
+DELETE http://localhost:3000/posts/2e60c9cd-24f3-46b8-abf4-47fa0f1b243c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+
+<> 2021-07-23T120359.200.json
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120351.200.json
+
+###
+
+DELETE http://localhost:3000/posts/5718c926-ded0-4805-8b8f-e2f876801dcd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+
+<> 2021-07-23T120330.200.json
+
+###
+
+PUT http://localhost:3000/posts/5718c926-ded0-4805-8b8f-e2f876801dcd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "name": "updated-post"
+}
+
+<> 2021-07-23T120325.200.json
+
+###
+
+PUT http://localhost:3000/posts/5718c926-ded0-4805-8b8f-e2f876801dcd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "name": "updated-post"
+}
+
+<> 2021-07-23T120319.200.json
+
+###
+
+DELETE http://localhost:3000/posts/1a06dcd2-a5f6-42f3-aee3-44e5b54fe8f6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+
+<> 2021-07-23T120311.200.json
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120307.200.json
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120045.200.json
+
+###
+
+PUT http://localhost:3000/posts/1a06dcd2-a5f6-42f3-aee3-44e5b54fe8f6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "name": "updated-post"
+}
+
+<> 2021-07-23T120039.200.json
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
+
+<> 2021-07-23T120028.200.json
+
+###
+
