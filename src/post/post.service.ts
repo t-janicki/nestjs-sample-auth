@@ -1,55 +1,52 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { RegisterPostDto } from './register-post.dto';
-import { v4 as uuidv4 } from 'uuid';
 import { UpdatePostDto } from './update-post.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Post } from './post.entity';
+import { DeleteResult, Repository } from 'typeorm';
+import { PostFactory } from './post-factory';
+import { UsersService } from '../user/users.service';
 
 @Injectable()
 export class PostService {
-  private posts = [
-    {
-      id: '2e60c9cd-24f3-46b8-abf4-47fa0f1b243c',
-      name: 'post-1',
-    },
-    {
-      id: '5718c926-ded0-4805-8b8f-e2f876801dcd',
-      name: 'post-2',
-    },
-    {
-      id: '1a06dcd2-a5f6-42f3-aee3-44e5b54fe8f6',
-      name: 'post-3',
-    },
-  ];
+  constructor(
+    @InjectRepository(Post)
+    private readonly postRepository: Repository<Post>,
+    private readonly postFactory: PostFactory,
+    private readonly userService: UsersService,
+  ) {}
 
-  getPosts(): any[] {
-    return this.posts;
+  async getPosts(): Promise<Post[]> {
+    return await this.postRepository.find({ relations: ['user'] });
   }
 
-  getPostById(postId: string) {
-    return this.posts.find((p) => p.id === postId);
+  async getPostById(postId: string) {
+    return await this.postRepository.findOne({ id: postId });
   }
 
-  createPost(registerPostDto: RegisterPostDto) {
-    const newUuid = uuidv4();
-    this.posts.push({ id: newUuid, name: registerPostDto.name });
-    return { id: newUuid, name: registerPostDto.name };
+  async createPost(
+    registerPostDto: RegisterPostDto,
+    userId: string,
+  ): Promise<Post> {
+    const user = await this.userService.getById(userId);
+    const post = this.postFactory.create(registerPostDto, user);
+    return this.postRepository.save(post);
   }
 
-  deletePosts(): any[] {
-    this.posts = [];
-    return this.posts;
+  deletePosts(): Promise<DeleteResult> {
+    return this.postRepository.delete({});
   }
 
   deletePostById(postId: string) {
-    this.posts = this.posts.filter((p) => p.id !== postId);
-    return this.posts;
+    return this.postRepository.delete({ id: postId });
   }
 
-  updatePost(postId: string, dto: UpdatePostDto) {
-    const post = this.posts.find((p) => p.id === postId);
+  async updatePost(postId: string, dto: UpdatePostDto) {
+    const post = await this.postRepository.findOne({ id: postId });
     if (!post) {
       throw new NotFoundException(`Post with id: ${postId} not found.`);
     }
     post.name = dto.name;
-    return post;
+    return this.postRepository.save(post);
   }
 }

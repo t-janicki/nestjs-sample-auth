@@ -6,6 +6,7 @@ import {
   Param,
   Post,
   Put,
+  Request,
   UseGuards,
 } from '@nestjs/common';
 import { PostService } from './post.service';
@@ -31,9 +32,9 @@ export class PostController {
 
   @Post()
   @UseGuards(RolesGuard)
-  @Roles(Role.Admin)
-  registerPost(@Body() postDto: RegisterPostDto) {
-    return this.postService.createPost(postDto);
+  @Roles(Role.User)
+  registerPost(@Request() req, @Body() postDto: RegisterPostDto) {
+    return this.postService.createPost(postDto, req.user.userId);
   }
 
   @Delete()

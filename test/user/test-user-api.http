@@ -1,0 +1,18 @@
+POST http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password"
+}
+
+###
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzMwMTAzNywiZXhwIjoxNjI3MzA0NjM3fQ.2xdClA-L2DKuodwado4UhtEYhEemnWXLxhZPmLKWclA
+
+###
+GET http://localhost:3000/users/john
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzMwMTAzNywiZXhwIjoxNjI3MzA0NjM3fQ.2xdClA-L2DKuodwado4UhtEYhEemnWXLxhZPmLKWclA
+
+###
