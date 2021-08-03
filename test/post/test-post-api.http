@@ -7,11 +7,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impva
 
 ###
 POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWZhNzJmYy1mNjRiLTQzY2UtOTI1NC1hMzAwNDc1ZDA0ZjUiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzMyODQ5MCwiZXhwIjoxNjI3MzMyMDkwfQ.a3HJXuAkmpfSaEhDh_EIOZicEtDolR5475esL4WlQMc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwidXNlcklkIjoiNzJhMTc2YTQtYzM1Yi00ZTlmLWIyZWYtYmM4YmI4NzExMDRmIiwicm9sZXMiOlsidXNlciJdLCJpYXQiOjE2MjgwMTAyOTUsImV4cCI6MTYyODAxMzg5NX0.PzRWYuygJk5YLojzqfDg4sh6tCUYZaOCRy9O8rvBoN0
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "name": "new-post-2"
 }
 
 ###

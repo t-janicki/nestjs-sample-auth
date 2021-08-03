@@ -6,7 +6,6 @@ import {
   Param,
   Post,
   Put,
-  Request,
   UseGuards,
 } from '@nestjs/common';
 import { PostService } from './post.service';
@@ -15,6 +14,7 @@ import { Roles } from '../auth/role.decarator';
 import { Role } from '../auth/role.enum';
 import { RolesGuard } from '../auth/roles.guard';
 import { UpdatePostDto } from './update-post.dto';
+import { CurrentUser, LoggedUser } from '../auth/logged-user.decorator';
 
 @Controller('/posts')
 export class PostController {
@@ -33,8 +33,11 @@ export class PostController {
   @Post()
   @UseGuards(RolesGuard)
   @Roles(Role.User)
-  registerPost(@Request() req, @Body() postDto: RegisterPostDto) {
-    return this.postService.createPost(postDto, req.user.userId);
+  registerPost(
+    @CurrentUser() loggedUser: LoggedUser,
+    @Body() postDto: RegisterPostDto,
+  ) {
+    return this.postService.createPost(postDto, loggedUser.userId);
   }
 
   @Delete()

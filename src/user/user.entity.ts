@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'user' })
+@Entity({ name: 'users' })
 export class User {
   @PrimaryGeneratedColumn('uuid')
   id?: string;
@@ -13,6 +13,4 @@ export class User {
 
   @Column({ name: 'email', unique: true })
   email: string;
-
-  // @OneToMany(type => Post)
 }

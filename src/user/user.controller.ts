@@ -3,7 +3,7 @@ import { UsersService } from './users.service';
 import { Public } from '../auth/constants';
 import { RegisterUserDto } from './register-user.dto';
 
-@Controller('/user')
+@Controller('/users')
 export class UserController {
   constructor(private readonly userService: UsersService) {}
 

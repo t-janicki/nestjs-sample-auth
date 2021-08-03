@@ -4,6 +4,8 @@ import { JwtService } from '@nestjs/jwt';
 import { PasswordService } from './password.service';
 import { LoginDto } from './login.dto';
 import { Role } from './role.enum';
+import { JwtPayload } from './jwt-payload';
+import { User } from '../user/user.entity';
 
 @Injectable()
 export class AuthService {
@@ -22,16 +24,15 @@ export class AuthService {
         user.password,
       ))
     ) {
-      const { password, ...result } = user;
-      return this.login(result);
+      return this.login(user);
     }
     throw new BadRequestException('Incorrect username or password.');
   }
 
-  async login(user: any) {
-    const payload = {
-      username: user.username,
-      sub: user.id,
+  async login(user: User) {
+    const payload: JwtPayload = {
+      email: user.email,
+      userId: user.id,
       roles: [Role.User], // todo roles table
     };
     return {

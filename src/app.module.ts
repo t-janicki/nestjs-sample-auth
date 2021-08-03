@@ -10,13 +10,17 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { User } from './user/user.entity';
 import { UserController } from './user/user.controller';
-import { Post } from "./post/post.entity";
+import { Post } from './post/post.entity';
+import { Comment } from './comment/comment.entity';
+import { PostCommentController } from './post/post-comment.controller';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [
     AuthModule,
     UsersModule,
     PostModule,
+    CommentModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -24,15 +28,21 @@ import { Post } from "./post/post.entity";
       username: 'postgres',
       password: 'postgres',
       database: 'project_nestjs',
-      entities: [User, Post],
+      entities: [User, Post, Comment],
       migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
       synchronize: true,
-      migrationsRun: true,
+      migrationsRun: false,
       logging: true,
       logger: 'file',
     }),
   ],
-  controllers: [AppController, AuthController, PostController, UserController],
+  controllers: [
+    AppController,
+    AuthController,
+    PostController,
+    PostCommentController,
+    UserController,
+  ],
   providers: [AppService],
 })
 export class AppModule {

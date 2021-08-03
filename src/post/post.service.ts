@@ -21,7 +21,10 @@ export class PostService {
   }
 
   async getPostById(postId: string) {
-    return await this.postRepository.findOne({ id: postId });
+    return await this.postRepository.findOne(
+      { id: postId },
+      { relations: ['user'] },
+    );
   }
 
   async createPost(
@@ -47,6 +50,10 @@ export class PostService {
       throw new NotFoundException(`Post with id: ${postId} not found.`);
     }
     post.name = dto.name;
+    return this.postRepository.save(post);
+  }
+
+  async save(post: Post) {
     return this.postRepository.save(post);
   }
 }
