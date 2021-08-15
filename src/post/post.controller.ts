@@ -32,7 +32,7 @@ export class PostController {
 
   @Post()
   @UseGuards(RolesGuard)
-  @Roles(Role.User)
+  @Roles(Role.USER)
   registerPost(
     @CurrentUser() loggedUser: LoggedUser,
     @Body() postDto: RegisterPostDto,

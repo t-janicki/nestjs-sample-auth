@@ -20,6 +20,16 @@ export class UsersTableMigration1627538037458 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'first_name',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'last_name',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
             name: 'password',
             type: 'varchar',
             isNullable: false,
@@ -34,6 +44,12 @@ export class UsersTableMigration1627538037458 implements MigrationInterface {
             name: 'email',
             type: 'varchar',
             isNullable: false,
+          },
+          {
+            name: 'created_at',
+            type: 'timestamp',
+            isNullable: false,
+            default: 'now()',
           },
         ],
       }),

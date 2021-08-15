@@ -8,12 +8,13 @@ import { PostModule } from './post/post.module';
 import { PostController } from './post/post.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { User } from './user/user.entity';
+import { UserEntity } from './user/user.entity';
 import { UserController } from './user/user.controller';
-import { Post } from './post/post.entity';
-import { Comment } from './comment/comment.entity';
+import { PostEntity } from './post/post.entity';
+import { CommentEntity } from './comment/comment.entity';
 import { PostCommentController } from './post/post-comment.controller';
 import { CommentModule } from './comment/comment.module';
+import { RoleEntity } from './user/role.entity';
 
 @Module({
   imports: [
@@ -28,7 +29,7 @@ import { CommentModule } from './comment/comment.module';
       username: 'postgres',
       password: 'postgres',
       database: 'project_nestjs',
-      entities: [User, Post, Comment],
+      entities: [UserEntity, RoleEntity, PostEntity, CommentEntity],
       migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
       synchronize: true,
       migrationsRun: false,
