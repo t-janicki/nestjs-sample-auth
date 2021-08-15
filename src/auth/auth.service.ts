@@ -5,7 +5,9 @@ import { PasswordService } from './password.service';
 import { LoginDto } from './login.dto';
 import { Role } from './role.enum';
 import { JwtPayload } from './jwt-payload';
-import { User } from '../user/user.entity';
+import { UserEntity } from '../user/user.entity';
+import { jwtConstants } from './constants';
+import { AuthenticationResponseDto } from './AuthenticationResponseDto';
 
 @Injectable()
 export class AuthService {
@@ -15,8 +17,10 @@ export class AuthService {
     private readonly passwordService: PasswordService,
   ) {}
 
-  async authenticateUser(loginDto: LoginDto): Promise<any> {
-    const user = await this.usersService.getByEmail(loginDto.email);
+  async authenticateUser(
+    loginDto: LoginDto,
+  ): Promise<AuthenticationResponseDto> {
+    const user = await this.usersService.getByEmailOrThrow(loginDto.email);
     if (
       user &&
       (await this.passwordService.matchesPassword(
@@ -29,14 +33,19 @@ export class AuthService {
     throw new BadRequestException('Incorrect username or password.');
   }
 
-  async login(user: User) {
+  async login(user: UserEntity): Promise<AuthenticationResponseDto> {
+    const roles = [Role.USER];
     const payload: JwtPayload = {
       email: user.email,
       userId: user.id,
-      roles: [Role.User], // todo roles table
+      roles: roles, // todo roles table
     };
     return {
-      access_token: this.jwtService.sign(payload),
+      accessToken: this.jwtService.sign(payload, {
+        expiresIn: jwtConstants.expiresIn,
+      }),
+      expiresIn: parseInt(jwtConstants.expiresIn),
+      roles: roles,
     };
   }
 }

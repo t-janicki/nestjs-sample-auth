@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { RegisterPostDto } from './register-post.dto';
 import { UpdatePostDto } from './update-post.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Post } from './post.entity';
+import { PostEntity } from './post.entity';
 import { DeleteResult, Repository } from 'typeorm';
 import { PostFactory } from './post-factory';
 import { UsersService } from '../user/users.service';
@@ -10,13 +10,13 @@ import { UsersService } from '../user/users.service';
 @Injectable()
 export class PostService {
   constructor(
-    @InjectRepository(Post)
-    private readonly postRepository: Repository<Post>,
+    @InjectRepository(PostEntity)
+    private readonly postRepository: Repository<PostEntity>,
     private readonly postFactory: PostFactory,
     private readonly userService: UsersService,
   ) {}
 
-  async getPosts(): Promise<Post[]> {
+  async getPosts(): Promise<PostEntity[]> {
     return await this.postRepository.find({ relations: ['user'] });
   }
 
@@ -30,8 +30,8 @@ export class PostService {
   async createPost(
     registerPostDto: RegisterPostDto,
     userId: string,
-  ): Promise<Post> {
-    const user = await this.userService.getById(userId);
+  ): Promise<PostEntity> {
+    const user = await this.userService.getByIdOrThrow(userId);
     const post = this.postFactory.create(registerPostDto, user);
     return this.postRepository.save(post);
   }
@@ -53,7 +53,7 @@ export class PostService {
     return this.postRepository.save(post);
   }
 
-  async save(post: Post) {
+  async save(post: PostEntity) {
     return this.postRepository.save(post);
   }
 }

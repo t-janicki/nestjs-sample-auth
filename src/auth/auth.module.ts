@@ -15,7 +15,7 @@ import { PasswordService } from './password.service';
     PassportModule,
     JwtModule.register({
       secret: jwtConstants.secret,
-      signOptions: { expiresIn: jwtConstants.expirationSeconds },
+      signOptions: { expiresIn: jwtConstants.expiresIn },
     }),
   ],
   providers: [
