@@ -1,14 +1,24 @@
-import { Body, Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Patch,
+  Post,
+  Put,
+  Request,
+  UseGuards,
+} from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Public } from '../auth/constants';
 import { RegisterUserDto } from './register-user.dto';
 import { UserDeviceGuard } from '../auth/user-device.guard';
 import { UserDto } from './user.dto';
+import { UpdateUserDto } from './update-user.dto';
+import { UpdatePasswordDto } from '../auth/update-password.dto';
 
 @Controller('/users')
 export class UserController {
-  constructor(private readonly userService: UsersService) {
-  }
+  constructor(private readonly userService: UsersService) {}
 
   @Public()
   @Post()
@@ -18,8 +28,48 @@ export class UserController {
 
   @Get()
   @UseGuards(UserDeviceGuard)
-  getUsers() {
-    return this.userService.findAll();
+  async getUsers() {
+    const users = await this.userService.findAll();
+    return users.map((user) => {
+      const result: UserDto = {
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        isActive: user.isActive,
+        createdAt: user.createdAt,
+        roles: user.roles.map((r) => r.name),
+      };
+      return result;
+    });
+  }
+
+  @Patch('/password')
+  async changePassword(@Request() req, @Body() dto: UpdatePasswordDto) {
+    const user = await this.userService.changePassword(req.user.userId, dto);
+    return {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      isActive: user.isActive,
+      createdAt: user.createdAt,
+      roles: user.roles.map((r) => r.name),
+    };
+  }
+
+  @Put()
+  async changeUserInfo(@Request() req, @Body() dto: UpdateUserDto) {
+    const user = await this.userService.updateUser(req.user.userId, dto);
+    return {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      isActive: user.isActive,
+      createdAt: user.createdAt,
+      roles: user.roles.map((r) => r.name),
+    };
   }
 
   @Get('/profile')

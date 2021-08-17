@@ -8,6 +8,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RegisterUserDto } from './register-user.dto';
 import { UserFactory } from './user-factory';
+import { UpdateUserDto } from './update-user.dto';
+import { PasswordService } from '../auth/password.service';
+import { UpdatePasswordDto } from '../auth/update-password.dto';
 
 @Injectable()
 export class UsersService {
@@ -15,10 +18,11 @@ export class UsersService {
     @InjectRepository(UserEntity)
     private readonly userRepository: Repository<UserEntity>,
     private readonly userFactory: UserFactory,
+    private readonly passwordService: PasswordService,
   ) {}
 
   findAll(): Promise<UserEntity[]> {
-    return this.userRepository.find();
+    return this.userRepository.find({ relations: ['roles'] });
   }
 
   async saveUser(userDto: RegisterUserDto): Promise<UserEntity> {
@@ -49,5 +53,29 @@ export class UsersService {
       throw new NotFoundException(`User not found by id: ${id}`);
     }
     return user;
+  }
+
+  async updateUser(id: string, dto: UpdateUserDto) {
+    const user = await this.getByIdOrThrow(id);
+    user.firstName = dto.firstName;
+    user.lastName = dto.lastName;
+    return this.userRepository.save(user);
+  }
+
+  async changePassword(id: string, dto: UpdatePasswordDto) {
+    const user = await this.getByIdOrThrow(id);
+    if (
+      await this.passwordService.matchesPassword(
+        dto.currentPassword,
+        user.password,
+      )
+    ) {
+      user.password = await this.passwordService.encodePassword(
+        dto.newPassword,
+      );
+      return this.userRepository.save(user);
+    } else {
+      throw new BadRequestException('Incorrect current password');
+    }
   }
 }

@@ -16,7 +16,7 @@ export class UserEntity {
   @Column({ name: 'password' })
   password: string;
 
-  @Column({ name: 'is_active', default: true })
+  @Column({ name: 'is_active', default: false })
   isActive: boolean;
 
   @Column({ name: 'email', unique: true })
