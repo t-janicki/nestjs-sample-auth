@@ -16,6 +16,7 @@ export class UserFactory {
       password: await this.passwordService.encodePassword(
         registerUserDto.password,
       ),
+      createdAt: new Date(),
       // roles: [Role.USER],
     };
   }
