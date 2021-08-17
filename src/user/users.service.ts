@@ -55,14 +55,17 @@ export class UsersService {
     return user;
   }
 
-  async updateUser(id: string, dto: UpdateUserDto) {
+  async updateUser(id: string, dto: UpdateUserDto): Promise<UserEntity> {
     const user = await this.getByIdOrThrow(id);
     user.firstName = dto.firstName;
     user.lastName = dto.lastName;
     return this.userRepository.save(user);
   }
 
-  async changePassword(id: string, dto: UpdatePasswordDto) {
+  async changePassword(
+    id: string,
+    dto: UpdatePasswordDto,
+  ): Promise<UserEntity> {
     const user = await this.getByIdOrThrow(id);
     if (
       await this.passwordService.matchesPassword(

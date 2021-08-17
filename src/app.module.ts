@@ -15,6 +15,10 @@ import { CommentEntity } from './comment/comment.entity';
 import { PostCommentController } from './post/post-comment.controller';
 import { CommentModule } from './comment/comment.module';
 import { RoleEntity } from './user/role.entity';
+import { UserDeviceModule } from './user-device/user-device.module';
+import { RefreshTokenModule } from './refresh-token/refresh-token.module';
+import { UserDeviceEntity } from './user-device/user-device.entity';
+import { RefreshTokenEntity } from './refresh-token/refresh-token.entity';
 
 @Module({
   imports: [
@@ -22,6 +26,8 @@ import { RoleEntity } from './user/role.entity';
     UsersModule,
     PostModule,
     CommentModule,
+    UserDeviceModule,
+    RefreshTokenModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -29,7 +35,14 @@ import { RoleEntity } from './user/role.entity';
       username: 'postgres',
       password: 'postgres',
       database: 'project_nestjs',
-      entities: [UserEntity, RoleEntity, PostEntity, CommentEntity],
+      entities: [
+        UserEntity,
+        RoleEntity,
+        PostEntity,
+        CommentEntity,
+        UserDeviceEntity,
+        RefreshTokenEntity,
+      ],
       migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
       synchronize: true,
       migrationsRun: false,
