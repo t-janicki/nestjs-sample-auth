@@ -3,7 +3,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impva
 Content-Type: application/json
 
 {
-  "email": "john@email.com",
+  "firstName": "John3",
+  "lastName": "Doe3",
+  "email": "john3@email.com",
   "password": "password"
 }
 

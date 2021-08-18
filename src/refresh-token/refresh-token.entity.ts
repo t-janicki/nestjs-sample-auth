@@ -18,7 +18,7 @@ export class RefreshTokenEntity {
   @Column({ name: 'expires_at', type: 'timestamp with time zone' })
   expiresAt: Date;
 
-  @OneToOne(() => UserDeviceEntity)
+  @OneToOne(() => UserDeviceEntity, { cascade: true })
   @JoinColumn({ name: 'user_device_id' })
   device: UserDeviceEntity;
 }

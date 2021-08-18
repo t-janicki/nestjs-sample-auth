@@ -2,12 +2,10 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { UsersService } from '../user/users.service';
 import { JwtService } from '@nestjs/jwt';
 import { PasswordService } from './password.service';
-import { LoginDto } from './login.dto';
-import { Role } from './role.enum';
 import { JwtPayload } from './jwt-payload';
 import { UserEntity } from '../user/user.entity';
 import { jwtConstants } from './constants';
-import { AuthenticationResponseDto } from './AuthenticationResponseDto';
+import { RoleEntity } from '../user/role.entity';
 
 @Injectable()
 export class AuthService {
@@ -17,35 +15,25 @@ export class AuthService {
     private readonly passwordService: PasswordService,
   ) {}
 
-  async authenticateUser(
-    loginDto: LoginDto,
-  ): Promise<AuthenticationResponseDto> {
-    const user = await this.usersService.getByEmailOrThrow(loginDto.email);
-    if (
-      user &&
-      (await this.passwordService.matchesPassword(
-        loginDto.password,
-        user.password,
-      ))
-    ) {
-      return this.login(user);
+  async authenticateUser(password: string, user: UserEntity) {
+    if (await this.passwordService.matchesPassword(password, user.password)) {
+      return this.createToken(user);
     }
     throw new BadRequestException('Incorrect username or password.');
   }
 
-  async login(user: UserEntity): Promise<AuthenticationResponseDto> {
-    const roles = [Role.USER];
+  private async createToken(user: UserEntity) {
+    const roles = user.roles.map((role: RoleEntity) => role.name);
     const payload: JwtPayload = {
       email: user.email,
       userId: user.id,
-      roles: roles, // todo roles table
+      roles: roles,
     };
     return {
-      accessToken: this.jwtService.sign(payload, {
-        expiresIn: jwtConstants.expiresIn,
+      token: this.jwtService.sign(payload, {
+        expiresIn: jwtConstants.expiresIn + 's',
       }),
-      expiresIn: parseInt(jwtConstants.expiresIn),
-      roles: roles,
+      expiresIn: jwtConstants.expiresIn,
     };
   }
 }
