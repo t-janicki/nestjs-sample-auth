@@ -1,389 +1,110 @@
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWZhNzJmYy1mNjRiLTQzY2UtOTI1NC1hMzAwNDc1ZDA0ZjUiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzMyODQ5MCwiZXhwIjoxNjI3MzMyMDkwfQ.a3HJXuAkmpfSaEhDh_EIOZicEtDolR5475esL4WlQMc
-Content-Type: application/json
+GET http://localhost:3000/api/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk
 
-{
-  "name": "new-post"
-}
-
-<> 2021-07-26T214152.201.json
+<> 2021-08-21T075521.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T214130.201.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T214125.201.json
-
-###
-
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWZhNzJmYy1mNjRiLTQzY2UtOTI1NC1hMzAwNDc1ZDA0ZjUiLCJpYXQiOjE2MjczMjgyMzIsImV4cCI6MTYyNzMzMTgzMn0.WT-Mr7aphBaUM6zXTqY8FW8nT8wux-MrB-oZM8yRYCs
-Content-Type: application/json
-
-{
-  "name": "new-post"
-}
-
-<> 2021-07-26T214044.403.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T213952.201.json
-
-###
-
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWZhNzJmYy1mNjRiLTQzY2UtOTI1NC1hMzAwNDc1ZDA0ZjUiLCJpYXQiOjE2MjczMjgyMzIsImV4cCI6MTYyNzMzMTgzMn0.WT-Mr7aphBaUM6zXTqY8FW8nT8wux-MrB-oZM8yRYCs
-Content-Type: application/json
-
-{
-  "name": "new-post"
-}
-
-<> 2021-07-26T213840.403.json
-
-###
-
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWZhNzJmYy1mNjRiLTQzY2UtOTI1NC1hMzAwNDc1ZDA0ZjUiLCJpYXQiOjE2MjczMjgyMzIsImV4cCI6MTYyNzMzMTgzMn0.WT-Mr7aphBaUM6zXTqY8FW8nT8wux-MrB-oZM8yRYCs
-Content-Type: application/json
-
-{
-  "name": "new-post"
-}
-
-<> 2021-07-26T213806.403.json
-
-###
-
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOWZhNzJmYy1mNjRiLTQzY2UtOTI1NC1hMzAwNDc1ZDA0ZjUiLCJpYXQiOjE2MjczMjgyMzIsImV4cCI6MTYyNzMzMTgzMn0.WT-Mr7aphBaUM6zXTqY8FW8nT8wux-MrB-oZM8yRYCs
-Content-Type: application/json
-
-{
-  "name": "new-post"
-}
-
-<> 2021-07-26T213746.403.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T213712.201.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T213708.201.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T213550.201.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T213449.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T213355.500.json
-
-###
-
-POST http://localhost:3000/users
+POST http://localhost:3000/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
 Content-Type: application/json
 
 {
-  "email": "john@email.com",
+  "firstName": "John3",
+  "lastName": "Doe3",
+  "email": "john4@email.com",
   "password": "password"
 }
 
-<> 2021-07-26T213340.400.json
+<> 2021-08-21T075232.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T212505.401.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T212409.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T212338.401.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T212303.401.json
-
-###
-
-POST http://localhost:3000/users
+POST http://localhost:3000/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
 Content-Type: application/json
 
 {
-  "email": "john@email.com",
+  "firstName": "John3",
+  "lastName": "Doe3",
+  "email": "john3@email.com",
   "password": "password"
 }
 
-<> 2021-07-26T212241.201.json
+<> 2021-08-21T075227.400.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Content-Type: application/json
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwidXNlcklkIjoiMWZiNjZhNjMtMWQyYy00NDM2LTgzY2EtMTgxOThhMGQ0ZjBmIiwicm9sZXMiOlsidXNlciJdLCJpYXQiOjE2Mjg3MDk3NTUsImV4cCI6MTYyODcwOTg3NX0.VJiXTE15Wi-4t1L_F3tX-OtDbkG8iNlCL80VDwsJnGU
 
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211938.401.json
+<> 2021-08-21T075217.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Content-Type: application/json
+GET http://localhost:3000/api/users/john
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzMwMTAzNywiZXhwIjoxNjI3MzA0NjM3fQ.2xdClA-L2DKuodwado4UhtEYhEemnWXLxhZPmLKWclA
 
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211901.401.json
+<> 2021-08-21T075212.404.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Content-Type: application/json
+GET http://localhost:3000/api/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk
 
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211805.401.json
+<> 2021-08-21T075149.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk
 Content-Type: application/json
 
 {
-  "email": "john@email.com",
-  "password": "password"
+  "description": "description-post"
 }
 
-<> 2021-07-26T211752.401.json
+<> 2021-08-21T075136.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/api/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk
 Content-Type: application/json
 
 {
-  "email": "john@email.com",
-  "password": "password"
+  "description": "description-post"
 }
 
-<> 2021-07-26T211657.401.json
+<> 2021-08-21T075128.404.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwidXNlcklkIjoiYTJiNjhjNTItZjc2MC00MmFhLWI5OTgtMzI4YTA4Y2U5MGViIiwicm9sZXMiOlsiVVNFUiJdLCJkZXZpY2VJZCI6IjE2Mzg1YmYzLWQzYWYtNDU2Mi05ZmVlLWEwNTI0ZjNiMzk2OSIsImlhdCI6MTYyOTUyNDk3MSwiZXhwIjoxNjI5NTI4NTcxfQ.vChpm7_FQGLNLXrQg5syL6ErpZN5kifdE7GG6bcRfsY
 Content-Type: application/json
 
 {
-  "email": "john@email.com",
-  "password": "password"
+  "name": "new-post-2"
 }
 
-<> 2021-07-26T211652.401.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211650.401.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211620.401.json
-
-###
-
-POST http://localhost:3000/auth/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211606.401.json
+<> 2021-08-21T074958.201.json
 
 ###
 
 POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwidXNlcklkIjoiYTJiNjhjNTItZjc2MC00MmFhLWI5OTgtMzI4YTA4Y2U5MGViIiwicm9sZXMiOlsiVVNFUiJdLCJkZXZpY2VJZCI6IjE2Mzg1YmYzLWQzYWYtNDU2Mi05ZmVlLWEwNTI0ZjNiMzk2OSIsImlhdCI6MTYyOTUyNDk3MSwiZXhwIjoxNjI5NTI4NTcxfQ.vChpm7_FQGLNLXrQg5syL6ErpZN5kifdE7GG6bcRfsY
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "name": "new-post-2"
 }
 
-<> 2021-07-26T211559.404.json
+<> 2021-08-21T074953.404.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password"
-}
-
-<> 2021-07-26T211552.401.json
-
-###
-
-POST http://localhost:3000/auth/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
@@ -391,11 +112,11 @@ Content-Type: application/json
   "password": "password"
 }
 
-<> 2021-07-26T211545.401.json
+<> 2021-08-21T074931.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
@@ -403,11 +124,11 @@ Content-Type: application/json
   "password": "password"
 }
 
-<> 2021-07-26T211525.401.json
+<> 2021-08-21T074009.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
@@ -415,11 +136,11 @@ Content-Type: application/json
   "password": "password"
 }
 
-<> 2021-07-26T211458.401.json
+<> 2021-08-21T073956.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
@@ -427,11 +148,11 @@ Content-Type: application/json
   "password": "password"
 }
 
-<> 2021-07-26T211411.401.json
+<> 2021-08-21T073853.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
@@ -439,138 +160,421 @@ Content-Type: application/json
   "password": "password"
 }
 
-<> 2021-07-26T211344.401.json
+<> 2021-08-21T073757.201.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "username": "john",
-  "password": "password"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T211326.404.json
+<> 2021-08-21T073739.400.json
 
 ###
 
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T211222.404.json
+<> 2021-08-21T073732.400.json
 
 ###
 
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T211123.201.json
+<> 2021-08-21T073506.400.json
 
 ###
 
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T211046.201.json
+<> 2021-08-21T073328.500.json
 
 ###
 
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T210805.201.json
+<> 2021-08-21T073131.400.json
 
 ###
 
-DELETE http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
-
-<> 2021-07-26T210413.200.json
-
-###
-
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T210406.201.json
+<> 2021-08-20T201834.500.json
 
 ###
 
-POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "new-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T210404.201.json
+<> 2021-08-20T201818.400.json
 
 ###
 
-DELETE http://localhost:3000/posts/251c7664-1dcc-4366-b3cf-c6d3f03905ed
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
-
-<> 2021-07-26T210356.200.json
-
-###
-
-PUT http://localhost:3000/posts/251c7664-1dcc-4366-b3cf-c6d3f03905ed
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "name": "updated-post"
+  "email": "john@email.com",
+  "password": "password2"
 }
 
-<> 2021-07-26T210242.200.json
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
 
 ###
 
-GET http://localhost:3000/posts/251c7664-1dcc-4366-b3cf-c6d3f03905ed
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
 
-<> 2021-07-26T210208.200.json
-
-###
-
-GET http://localhost:3000/posts/251c7664-1dcc-4366-b3cf-c6d3f03905ed
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcwMTgwNzksImV4cCI6MTYyNzA3ODA3OX0.PYJ5p3wAd7VS2Jw_VCBiFzGeVYuecg1vxuLg5nP-ZVM
-
-<> 2021-07-26T210159.401.json
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
 
 ###
 
-GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
 
-<> 2021-07-26T205904.200.json
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T201751.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T201738.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T201711.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T201343.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T201337.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T200432.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T200427.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T200332.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T200216.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T200157.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T195337.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T195318.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T195232.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T193236.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T193212.500.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T192723.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T192438.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T192427.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T192421.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T192013.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T191830.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T191817.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T191400.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T191337.400.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "password2"
+}
+
+<> 2021-08-20T191042.500.json
 
 ###
 

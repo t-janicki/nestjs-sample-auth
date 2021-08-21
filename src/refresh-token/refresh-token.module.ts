@@ -4,10 +4,11 @@ import { RefreshTokenEntity } from './refresh-token.entity';
 import { RefreshTokenService } from './refresh-token.service';
 import { UserDeviceModule } from '../user-device/user-device.module';
 import { UsersModule } from '../user/users.module';
+import { RefreshTokenRepository } from './refresh-token.repository';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([RefreshTokenEntity]),
+    TypeOrmModule.forFeature([RefreshTokenEntity, RefreshTokenRepository]),
     UserDeviceModule,
     UsersModule,
   ],

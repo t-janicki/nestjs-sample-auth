@@ -9,6 +9,7 @@ import { jwtConstants } from './constants';
 import { Response } from 'express';
 import { CookieService } from './cookie.service';
 import { RoleEntity } from '../user/role.entity';
+import { randomUUID } from 'crypto';
 
 @Injectable()
 export class LoginService {
@@ -23,12 +24,20 @@ export class LoginService {
     loginDto: LoginDto,
     response: Response,
   ): Promise<AuthenticationResponseDto> {
+    const deviceId = randomUUID();
     const user = await this.userService.getByEmailOrThrow(loginDto.email);
-    const accessToken = await this.authService.authenticateUser(loginDto.password, user);
-    const refreshToken = await this.refreshTokenService.registerRefreshToken(user);
+    const accessToken = await this.authService.authenticateUser(
+      loginDto.password,
+      user,
+      deviceId,
+    );
+    const refreshToken = await this.refreshTokenService.registerRefreshToken(
+      user,
+      deviceId,
+    );
     this.cookieService.setAccessToken(response, accessToken.token);
     this.cookieService.setRefreshToken(response, refreshToken.token);
-    this.cookieService.setDevice(response, refreshToken.device.id);
+    this.cookieService.setDevice(response, deviceId);
     return {
       accessToken: accessToken.token,
       expiresIn: jwtConstants.expiresIn,

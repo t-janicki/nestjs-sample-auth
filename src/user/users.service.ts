@@ -1,7 +1,5 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { UserEntity } from './user.entity';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { RegisterUserDto } from './register-user.dto';
 import { UserFactory } from './user-factory';
 import { UpdateUserDto } from './update-user.dto';
@@ -10,12 +8,12 @@ import { UpdatePasswordDto } from '../auth/update-password.dto';
 import { RoleEntity } from './role.entity';
 import { Role } from '../auth/role.enum';
 import { RoleService } from './role.service';
+import { UserRepository } from './user.repository';
 
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(UserEntity)
-    private readonly userRepository: Repository<UserEntity>,
+    private readonly userRepository: UserRepository,
     private readonly roleService: RoleService,
     private readonly userFactory: UserFactory,
     private readonly passwordService: PasswordService,
