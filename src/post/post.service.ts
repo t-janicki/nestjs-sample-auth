@@ -1,17 +1,16 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { RegisterPostDto } from './register-post.dto';
 import { UpdatePostDto } from './update-post.dto';
-import { InjectRepository } from '@nestjs/typeorm';
 import { PostEntity } from './post.entity';
-import { DeleteResult, Repository } from 'typeorm';
+import { DeleteResult } from 'typeorm';
 import { PostFactory } from './post-factory';
 import { UsersService } from '../user/users.service';
+import { PostRepository } from './post.repository';
 
 @Injectable()
 export class PostService {
   constructor(
-    @InjectRepository(PostEntity)
-    private readonly postRepository: Repository<PostEntity>,
+    private readonly postRepository: PostRepository,
     private readonly postFactory: PostFactory,
     private readonly userService: UsersService,
   ) {}

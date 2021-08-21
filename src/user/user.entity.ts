@@ -1,5 +1,10 @@
-import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Role } from '../auth/role.enum';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { RoleEntity } from './role.entity';
 
 @Entity({ name: 'users' })
@@ -25,7 +30,7 @@ export class UserEntity {
   @Column({ name: 'created_at' })
   createdAt?: Date;
 
-  @ManyToMany(() => RoleEntity, (role) => role.name)
+  @ManyToMany(() => RoleEntity, (role: RoleEntity) => role.id)
   @JoinTable({
     joinColumn: {
       name: 'user_id',

@@ -1,15 +1,13 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import { CommentEntity } from './comment.entity';
-import { Repository } from 'typeorm';
 import { RegisterCommentDto } from './register-comment.dto';
 import { PostService } from '../post/post.service';
+import { CommentRepository } from './comment.repository';
 
 @Injectable()
 export class CommentService {
   constructor(
-    @InjectRepository(CommentEntity)
-    private readonly commentRepository: Repository<CommentEntity>,
+    private readonly commentRepository: CommentRepository,
     private readonly postService: PostService,
   ) {}
 
@@ -22,13 +20,7 @@ export class CommentService {
   }
 
   async getComments(postId: string) {
-    return await this.commentRepository
-      .createQueryBuilder('comment')
-      .innerJoinAndSelect('comment.post', 'post')
-      .where('post.id = :postId', {
-        postId: postId,
-      })
-      .getMany();
+    return await this.commentRepository.getCommentsByPostId(postId);
   }
 
   private async getPost(postId: string) {

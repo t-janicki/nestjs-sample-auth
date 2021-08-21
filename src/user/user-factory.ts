@@ -2,12 +2,15 @@ import { Injectable } from '@nestjs/common';
 import { RegisterUserDto } from './register-user.dto';
 import { UserEntity } from './user.entity';
 import { PasswordService } from '../auth/password.service';
-import { Role } from '../auth/role.enum';
+import { RoleEntity } from './role.entity';
 
 @Injectable()
 export class UserFactory {
   constructor(private readonly passwordService: PasswordService) {}
-  async create(registerUserDto: RegisterUserDto): Promise<UserEntity> {
+  async create(
+    registerUserDto: RegisterUserDto,
+    roles: RoleEntity[],
+  ): Promise<UserEntity> {
     return {
       firstName: registerUserDto.firstName,
       lastName: registerUserDto.lastName,
@@ -17,7 +20,7 @@ export class UserFactory {
         registerUserDto.password,
       ),
       createdAt: new Date(),
-      // roles: [Role.USER],
+      roles: roles,
     };
   }
 }

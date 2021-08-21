@@ -1,5 +1,4 @@
-### /posts/:postId/comments
-POST http://localhost:3000/posts/456aa524-9682-4763-b102-5452223c0b94/comments
+POST http://localhost:3000/api/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/comments
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk
 Content-Type: application/json
 
@@ -8,5 +7,5 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/posts/456aa524-9682-4763-b102-5452223c0b94/comments
+GET http://localhost:3000/api/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/comments
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk

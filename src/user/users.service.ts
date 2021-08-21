@@ -1,22 +1,20 @@
-import {
-  BadRequestException,
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { UserEntity } from './user.entity';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { RegisterUserDto } from './register-user.dto';
 import { UserFactory } from './user-factory';
 import { UpdateUserDto } from './update-user.dto';
 import { PasswordService } from '../auth/password.service';
 import { UpdatePasswordDto } from '../auth/update-password.dto';
+import { RoleEntity } from './role.entity';
+import { Role } from '../auth/role.enum';
+import { RoleService } from './role.service';
+import { UserRepository } from './user.repository';
 
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(UserEntity)
-    private readonly userRepository: Repository<UserEntity>,
+    private readonly userRepository: UserRepository,
+    private readonly roleService: RoleService,
     private readonly userFactory: UserFactory,
     private readonly passwordService: PasswordService,
   ) {}
@@ -32,12 +30,16 @@ export class UsersService {
     if (existingUser) {
       throw new BadRequestException('User already exists');
     }
-    const user: UserEntity = await this.userFactory.create(userDto);
+    const role: RoleEntity[] = await this.roleService.getRolesByName(Role.USER);
+    const user: UserEntity = await this.userFactory.create(userDto, role);
     return this.userRepository.save(user);
   }
 
   async getByEmailOrThrow(email: string): Promise<UserEntity> {
-    const user = await this.userRepository.findOne({ email: email });
+    const user = await this.userRepository.findOne(
+      { email: email },
+      { relations: ['roles'] },
+    );
     if (!user) {
       throw new NotFoundException(`User not found by email: ${email}`);
     }
@@ -55,14 +57,17 @@ export class UsersService {
     return user;
   }
 
-  async updateUser(id: string, dto: UpdateUserDto) {
+  async updateUser(id: string, dto: UpdateUserDto): Promise<UserEntity> {
     const user = await this.getByIdOrThrow(id);
     user.firstName = dto.firstName;
     user.lastName = dto.lastName;
     return this.userRepository.save(user);
   }
 
-  async changePassword(id: string, dto: UpdatePasswordDto) {
+  async changePassword(
+    id: string,
+    dto: UpdatePasswordDto,
+  ): Promise<UserEntity> {
     const user = await this.getByIdOrThrow(id);
     if (
       await this.passwordService.matchesPassword(
