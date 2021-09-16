@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { UserEntity } from './user.entity';
 import { RegisterUserDto } from './register-user.dto';
 import { UserFactory } from './user-factory';
@@ -57,10 +61,18 @@ export class UsersService {
     return user;
   }
 
+  async updateInfoAboutMe(id: string, dto: UpdateUserDto): Promise<UserEntity> {
+    const user = await this.getByIdOrThrow(id);
+    user.firstName = dto.firstName;
+    user.lastName = dto.lastName;
+    return this.userRepository.save(user);
+  }
+
   async updateUser(id: string, dto: UpdateUserDto): Promise<UserEntity> {
     const user = await this.getByIdOrThrow(id);
     user.firstName = dto.firstName;
     user.lastName = dto.lastName;
+    user.isActive = dto.isActive;
     return this.userRepository.save(user);
   }
 

@@ -1,3 +1,18 @@
+POST http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI5ZTk1OWRkNC0wODRjLTQ1YmItOTMwMC01M2ViOTE3ZTczYmEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzAzMTcxMywiZXhwIjoxNjI3NjMxNzEzfQ.ZxamvCH2x7kE3SiJ7hKgIii-A8Pvm0WX_at2s_X0RYg
+Content-Type: application/json
+
+{
+  "firstName": "John3",
+  "lastName": "Doe3",
+  "email": "t.janicki88@gmail.com",
+  "password": "password"
+}
+
+<> 2021-09-09T192130.201.json
+
+###
+
 GET http://localhost:3000/api/posts/5f590a81-9522-42f6-a78b-cd2559b6e16a/comments
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMmI2OGM1Mi1mNzYwLTQyYWEtYjk5OC0zMjhhMDhjZTkwZWIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNzQ3NDA4MiwiZXhwIjoxNjI3NDc3NjgyfQ.gdx9nfEE0ihESWn_jzSiyrng21ha4cuFMegdNqSPkSk
 
@@ -563,18 +578,6 @@ Content-Type: application/json
 }
 
 <> 2021-08-20T191337.400.json
-
-###
-
-POST http://localhost:3000/api/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@email.com",
-  "password": "password2"
-}
-
-<> 2021-08-20T191042.500.json
 
 ###
 
